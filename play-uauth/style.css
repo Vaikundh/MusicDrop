@@ -1,7 +1,7 @@
 body {
     background-color: wheat;
 }
-.out {
+.in, .out {
     display: none;
 }
 
