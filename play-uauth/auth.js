@@ -17,13 +17,14 @@ auth.onAuthStateChanged(user => {
 // signup
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
+    // this is to stop the page from refreshing when form is submitted
     e.preventDefault();
 
     // get user info
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
 
-    // sign up the user
+    // sign up the user and add to the database using unique userID
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         return db.collection('users').doc(cred.user.uid).set({
             photoURL: signupForm['signup-photoURL'].value,
@@ -32,6 +33,7 @@ signupForm.addEventListener('submit', (e) => {
             upvotes: 0
         });
     }).then(() => {
+        // reset form to blank inputs
         signupForm.reset();
     }).catch(err => {
         alert(err.message);
