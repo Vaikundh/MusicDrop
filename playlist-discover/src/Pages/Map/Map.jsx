@@ -2,7 +2,8 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import './Map.css'
 import './LocationPin'
-let API_KEY = 'AIzaSyBtt-O9TvFLdHzfEgGOFACMfNPY7LUjbig';
+//import * as api_key from './maps-api'
+const API_KEY = `${process.env.REACT_APP_MAPS_API_KEY}`
 
 // import 
 // import { Droplet } from '@react-feather';
