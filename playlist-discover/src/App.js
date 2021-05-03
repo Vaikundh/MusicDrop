@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import MapSection from "./Pages/Map/Map.jsx";
 //Add other pages here
@@ -13,7 +13,7 @@ const location = {
 function App() {
   return (
     <div className = "App">
-      <MapSection location={location} zoomLevel={17}></MapSection>
+      <MapSection location={location} zoomLevel={18}></MapSection>
     </div>
   );
 }

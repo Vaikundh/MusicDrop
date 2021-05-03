@@ -4,21 +4,23 @@ import './Map.css'
 import './LocationPin'
 let API_KEY = 'AIzaSyBtt-O9TvFLdHzfEgGOFACMfNPY7LUjbig';
 
-//import { Icon } from '@iconify/react'
+import 
+import { Droplet } from '@react-feather';
 //import locationIcon from '@iconify/icons-mdi/map-marker'
 
-const location = {
-    address: '1600 Amphitheatre Parkway, Mountain View, california.',
-    lat: 37.42216,
-    lng: -122.08427,
+const location1 = {
+    address: 'Sather Rd, Berkeley, CA',
+    lat: 37.873183,
+    lng: -122.259623,
   }
 
-//   const LocationPin = ({ text }) => (
-//     <div className="pin">
-//       <Icon icon={locationIcon} className="pin-icon" />
-//       <p className="pin-text">{text}</p>
-//     </div>
-//   )
+  const LocationPin = ({ text }) => (
+    <div className="pin">
+      <Icon icon={Droplet} className="pin-icon" />
+      <p className="pin-text">{text}</p>
+    </div>
+  )
+
   //add more locations
   const Map = ({ location, zoomLevel }) => (
     <div className="map">
@@ -27,10 +29,10 @@ const location = {
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
-          defaultCenter={location}
+          defaultCenter={location1}
           defaultZoom={zoomLevel}
         >
-         
+        
         </GoogleMapReact>
       </div>
     </div>
