@@ -25,7 +25,6 @@ const location1 = {
   const Map = ({ location, zoomLevel }) => (
     <div className="map">
       <h2 className="map-h2">Add to our playlist at the Memorial Glade!</h2>
-  
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
