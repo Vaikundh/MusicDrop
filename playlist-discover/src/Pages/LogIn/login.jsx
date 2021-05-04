@@ -112,8 +112,20 @@ export default function Login() {
     });*/
 
     // login
+    const doLogin = () => {
+        const email = loginForm['login-email'].value;
+        const password = loginForm['login-password'].value;
+
+        // log the user in
+        auth.signInWithEmailAndPassword(email, password).then((cred) => {
+            loginForm.reset();
+        }).catch(err => {
+            alert(err.message);
+        });
+
+    }
     const loginForm = document.querySelector('#login-form');
-    loginForm.addEventListener('submit', (e) => {
+    /*loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         // get user info
@@ -127,10 +139,8 @@ export default function Login() {
             alert(err.message);
         });
 
-    });
-
-
-
+    });*/
+   
 
 
 
@@ -139,6 +149,7 @@ export default function Login() {
         <div className="box">
             <div class="login-container in">
             <h1>Log In</h1>
+            <h6>No Account? Sign Up</h6>
             <form id="login-form">
                 <div class="input-field">
                     <input type="email" id="login-email" placeholder="Email address" required />
@@ -146,7 +157,7 @@ export default function Login() {
                 <div class="input-field">
                     <input type="password" id="login-password" placeholder="Password" required />
                 </div>
-                <button class="butt">Log In</button>
+                <button onClick={doLogin}class="butt">Log In</button>
             </form>
             
         </div>
