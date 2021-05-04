@@ -18,14 +18,14 @@
     "react-feather": "^2.0.9",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "react-spotify-web-playback": "^0.8.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-app start",
-    "build": "react-app build",
-    "eject": "react-scripts eject"
+    "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build",
+    "eject": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "eslintConfig": {
     "extends": [

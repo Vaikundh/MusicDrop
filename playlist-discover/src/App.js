@@ -8,6 +8,7 @@ import Footer from "./Pages/PageComponents/Footer.jsx"
 import Home from "./Pages/Home.jsx"
 import LogIn from "./Pages/LogIn/login.jsx"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Add other pages here
 
 const location = {
