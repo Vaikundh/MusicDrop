@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="signup-container in">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <div class="input-field">
+                <input type="email" id="signup-email" placeholder="Email address" required />
+            </div>
+            <div class="input-field">
+                <input type="password" id="signup-password" placeholder="Password" required />
+            </div>
+            <div class="input-field">
+                <input type="url" id="signup-photoURL" placeholder="photoURL" required />
+            </div>
+            <button class="butt">Sign up</button>
+        </form>
+    </div>
+
+    <div class="login-container in">
+        <h1>Log In</h1>
+        <form id="login-form">
+            <div class="input-field">
+                <input type="email" id="login-email" placeholder="Email address" required />
+            </div>
+            <div class="input-field">
+                <input type="password" id="login-password" placeholder="Password" required />
+            </div>
+            <button class="butt">Log In</button>
+        </form>
+    </div>
+
+    <div class="out" id="profile-container">
+        <div class="picname">
+            <img id="profile-pic" src="">
+            <p id="name"></p>
+        </div>
+        <div id="stats">
+            <p id="username"></p>
+            <p id="locations"></p>
+            <p id="added"></p>
+            <p id="upvotes"></p>
+        </div>
+    </div>
+
+    <div class="out" id="logout-container">
+        <h1>Log Out</h1>
+        <button id="logout">Log Out</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCLgj9054PJz9gh8WhkJkQcr1gY2pzPAIM",
+            authDomain: "playlist-e363a.firebaseapp.com",
+            projectId: "playlist-e363a",
+            storageBucket: "playlist-e363a.appspot.com",
+            messagingSenderId: "821399492309",
+            appId: "1:821399492309:web:06d8eb435c88e509a7345c",
+            // measurementId: "G-85VW1TPZ5T"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+    </script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
