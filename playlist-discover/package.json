@@ -16,12 +16,12 @@
     "react-feather": "^2.0.9",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
+    "react-spotify-web-playback": "^0.8.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app start",
+    "build": "react-app build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,5 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react-app-rewired": "^2.1.8"
+  }
 }
