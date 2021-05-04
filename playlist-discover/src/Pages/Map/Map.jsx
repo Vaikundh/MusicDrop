@@ -1,7 +1,11 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import './Map.css'
-import { LocationPin } from './LocationPin'
+import  LocationPin  from './LocationPin'
+//import SpotifyPlayer from 'react-spotify-web-playback';
+import SpotifyLogin from './SpotifyLogin'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 const API_KEY = `${process.env.REACT_APP_MAPS_API_KEY}`
 
 const location1 = {
@@ -10,19 +14,7 @@ const location1 = {
     lng: -122.259623,
   }
 
-  // class Foo extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.handleClick = this.handleClick.bind(this);
-  //   }
-  //   handleClick() {
-  //     console.log('Click happened');
-  //   }
-  //   render() {
-  //     return <button onClick={this.handleClick}>Click Me</button>;
-  //   }
-  // }
-  //add more locations
+
   const Map = ({ location, zoomLevel }) => (
     <div className="map">
       <div className="google-map">
@@ -37,6 +29,7 @@ const location1 = {
             text={location1.address}
           />
         </GoogleMapReact>
+        <SpotifyLogin/>
       </div>
     </div>
   )
