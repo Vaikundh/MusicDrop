@@ -1,47 +1,55 @@
 body {
-    background-color: #fff;
-    border-radius: 10px
-}
-
-.container {
-    width: 50vw;
+    background-color: #EEEEEE;
+    border-radius: 10px;
 }
 
 .card {
-    width: 800px;
+    width: 80vw;
     border: none;
     border-radius: 10px;
-    background-color: #fff
+    background-color: #fff;
+}
+
+#name {
+    text-align: center;
+    padding: 1vw;
 }
 
 .stats {
     background: #f2f5f8 !important;
-    color: #000 !important
+    color: #000 !important;
 }
 
 .articles {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number1 {
-    font-weight: 500
+    font-weight: 500;
+    font-size: x-large;
 }
 
 .followers {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number2 {
-    font-weight: 500
+    font-weight: 500;
+    font-size: x-large;
 }
 
 .rating {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number3 {
-    font-weight: 500
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.titles {
+    font-size: x-large;
 }
