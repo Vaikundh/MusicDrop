@@ -6,15 +6,11 @@ class Contact extends Component {
     render() {
         return (
             <section className="container-1">
-
                 <img id="contactimg" src={contact} width="180" height="180" alt="contactlogo"/>
                 <h3> <strong>Okay Dexter</strong></h3>
                 <h4>Random Text Random text Random text</h4>
                 <h4>Email Id: okdexter94@gmail.com</h4>
                 <h4>Contant Info: 19200999394/2999839902</h4>
-
-
-
                         <a href="https://www.facebook.com/abhishek.shaji1">
                         <span className="icon fa fa-facebook" style={{color:'antiquewhite'}} ></span>
                         </a>

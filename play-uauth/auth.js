@@ -7,7 +7,7 @@ auth.onAuthStateChanged(user => {
         db.collection('users').doc(user.uid).onSnapshot(doc => {
             fixdisplay(user, doc.data());
         }, err => {
-            console.log(error.message)
+            console.log(err.message)
         });
     } else {
         fixdisplay();
