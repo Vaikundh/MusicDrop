@@ -5,6 +5,7 @@
 
 # api keys
 .env
+src/Pages/Map/server/server.js
 
 # dependencies
 /node_modules

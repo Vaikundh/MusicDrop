@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "google-map-react": "^2.1.9",
     "react": "^17.0.2",
@@ -22,8 +23,9 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-app start",
-    "build": "react-app build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

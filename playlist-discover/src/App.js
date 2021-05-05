@@ -24,11 +24,10 @@ function App() {
           <Switch>
             <Route path="/" exact component={() => <Home />} />
             <Route path="/Login" exact component={() => <LogIn />} />
-            <Route path="/Map" exact component={() => <MapSection location={location} zoomLevel={18}></MapSection>} />
+            <Route path="/Map" exact component={() => <MapSection location={location} zoomLevel={19}></MapSection>} />
             <Route path="/PersonalPage" exact component={() => <PersonalPage />} />
             <Route path="/About" exact component={() => <About />} />
           </Switch>
-          <Footer />
         </Router>
       </div>
   );
