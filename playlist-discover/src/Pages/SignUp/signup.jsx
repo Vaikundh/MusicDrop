@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link, withRouter } from "react-router-dom";
 import './signup.css';
 import firebase from "firebase/app";
 // If you are using v7 or any earlier version of the JS SDK, you should import firebase using namespace import
@@ -11,8 +12,8 @@ import "firebase/analytics";
 import "firebase/auth";
 import "firebase/firestore";
 
-  
-  // Initialize Firebase
+
+// Initialize Firebase
 
 /*
 export default function SignUp() {
@@ -97,88 +98,92 @@ const doSignUp = () => {
 
 }*/
 
-  //firebase.initializeApp();
-const LoginForm = () => {
+//firebase.initializeApp();
+const SignUpForm = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyCLgj9054PJz9gh8WhkJkQcr1gY2pzPAIM",
-                authDomain: "playlist-e363a.firebaseapp.com",
-                projectId: "playlist-e363a",
-                storageBucket: "playlist-e363a.appspot.com",
-                messagingSenderId: "821399492309",
-                appId: "1:821399492309:web:06d8eb435c88e509a7345c",
-                // measurementId: "G-85VW1TPZ5T"
-      };
-      if (!firebase.apps.length) {
+        authDomain: "playlist-e363a.firebaseapp.com",
+        projectId: "playlist-e363a",
+        storageBucket: "playlist-e363a.appspot.com",
+        messagingSenderId: "821399492309",
+        appId: "1:821399492309:web:06d8eb435c88e509a7345c",
+        // measurementId: "G-85VW1TPZ5T"
+    };
+    if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
-      }else {
+    } else {
         firebase.app(); // if already initialized, use that one
-      }
-      //firebase.analytics();
+    }
+    //firebase.analytics();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const doSignUp = () => {
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-    
-        
-        // const instuff = document.getElementsByClassName("in");
+    const doSignUp = (e) => {
+
+
+        /* const instuff = document.getElementsByClassName("in");
         const outstuff = document.getElementsByClassName("out");
         const username = document.getElementById("username");
         const locations = document.getElementById("locations");
         const added = document.getElementById("added");
         const upvotes = document.getElementById("upvotes");
-        const profilepic = document.getElementById("profile-pic");
+        const profilepic = document.getElementById("profile-pic"); */
 
         //const email = this.email.value;
         //const password = this.password.value;
-        const signupForm = document.querySelector('#signup-form');
-    
-            // sign up the user and add to the database using unique userID
-            auth.createUserWithEmailAndPassword(email, password).then(cred => {
-                console.log(cred);
-                return db.collection('users').doc(cred.user.uid).set({
-                    photoURL: signupForm['signup-photoURL'].value,
-                    locations: 0,
-                    added: 0,
-                    upvotes: 0
-                });
-            }).then(() => {
-                console.log("hello");
-                // reset form to blank inputs
-                //signupForm.reset();
-            }).catch(err => {
-                alert(err.message);
-            })
+        // const signupForm = document.querySelector('#signup-form');
+
+        // sign up the user and add to the database using unique userID
+        e.preventDefault();
+        auth.createUserWithEmailAndPassword(email, password).then(cred => {
+            console.log(cred);
+            return db.collection('users').doc(cred.user.uid).set({
+                // photoURL: signupForm['signup-photoURL'].value,
+                locations: 0,
+                added: 0,
+                upvotes: 0
+            });
+        }).then(() => {
+            console.log("hello");
+            window.location.href = "/Map";
+            // reset form to blank inputs
+            // signupForm.reset();
+        }).catch(err => {
+            alert(err.message);
+        })
     }
 
 
-     
 
-        return (
-          <form>
+
+    return (
+        <form>
             <input
                 type="text"
                 className="form-control mb-2 mr-sm-2 mb-sm-0"
                 placeholder="Email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}/>
+                onChange={(e) => setEmail(e.target.value)} />
             <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input
-                type="password"
-                className="form-control"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}/>
-            </div>  
-            <button 
+                <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <Link to="/Map">
+            <button
                 onClick={doSignUp}
-                type="submit" 
+                type="submit"
                 className="btn btn-primary">SignUp
             </button>
+            </Link>
         </form>
-        );
-      }
-   
+    );
+}
 
-export default LoginForm
+
+export default SignUpForm
