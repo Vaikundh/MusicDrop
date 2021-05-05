@@ -5,8 +5,8 @@ import PersonalPage from "./Pages/PersonalPage/PersonalPage.jsx";
 import About from "./Pages/About/About.jsx"
 import Navigation from "./Pages/PageComponents/Navigation.jsx"
 import Footer from "./Pages/PageComponents/Footer.jsx"
-import Home from "./Pages/Home.jsx"
-import LogIn from "./Pages/LogIn/login.jsx"
+import Home from "./Pages/Home/Home.jsx"
+import LogIn from "./Pages/SignUp/signup.jsx"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Add other pages here
