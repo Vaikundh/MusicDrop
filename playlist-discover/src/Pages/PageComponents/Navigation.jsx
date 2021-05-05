@@ -1,13 +1,14 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import "./Navigation.css"
 
 function Navigation(props) {
   return (
     <div className="navigation">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <nav class="navbar navbar-expand">
         <div class="container">
           <Link class="navbar-brand" to="/">
-            Playlist Discover
+            Music Drop
           </Link>
           <div>
             <ul class="navbar-nav ml-auto">
@@ -43,11 +44,11 @@ function Navigation(props) {
               </li>
               <li
                 class={`nav-item  ${
-                  props.location.pathname === "/PersonalPage" ? "active" : ""
+                  props.location.pathname === "/Profile" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/PersonalPage">
-                  Personal Page
+                <Link class="nav-link" to="/Profile">
+                  Profile
                 </Link>
               </li>
               <li

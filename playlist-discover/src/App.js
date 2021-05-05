@@ -27,7 +27,7 @@ function App() {
             <Route path="/SignUp" exact component={() => <SignUp />} />
             <Route path="/LogIn" exact component={() => <LogIn />} />
             <Route path="/Map" exact component={() => <MapSection location={location} zoomLevel={18}></MapSection>} />
-            <Route path="/PersonalPage" exact component={() => <PersonalPage />} />
+            <Route path="/Profile" exact component={() => <PersonalPage />} />
             <Route path="/About" exact component={() => <About />} />
           </Switch>
         </Router>
